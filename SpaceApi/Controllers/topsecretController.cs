@@ -21,13 +21,7 @@ namespace SpaceApi.Controllers
             _gestorSatelite = gestorSatelite;
         }
 
-        //[HttpGet("{id}")]
-
-        //public string Get(string id)
-        //{
-
-        //    return id;
-        //}
+        
 
         [HttpPost]
         public ActionResult<ResponseDTO> Post(RequestDTO satellites)
