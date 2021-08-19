@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Model\**" />
+    <Compile Remove="Services\**" />
+    <Content Remove="Model\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="Model\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Model\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.13.1" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.13.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceApi.Aplicacion.Gestor\SpaceApi.Aplicacion.Gestor.csproj" />
+    <ProjectReference Include="..\SpaceApi.Aplicacion.IGestor\SpaceApi.Aplicacion.IGestor.csproj" />
+    <ProjectReference Include="..\SpaceApi.Core.Service\SpaceApi.Core.Service.csproj" />
+  </ItemGroup>
+
+</Project>

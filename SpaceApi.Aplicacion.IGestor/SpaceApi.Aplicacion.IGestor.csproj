@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceApi.Aplicacion.DTO\SpaceApi.Aplicacion.DTO.csproj" />
+    <ProjectReference Include="..\SpaceApi.Core.BE\SpaceApi.Core.BE.csproj" />
+  </ItemGroup>
+
+</Project>
