@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpaceApi</name>
+    </assembly>
+    <members>
+        <member name="M:SpaceApi.Controllers.topsecretController.Post(SpaceApi.Aplicacion.DTO.RequestDTO)">
+            <summary>
+            Retorna el mensaje que puede interpretar a partir del request. El array de JSon debe tener tres elementos para que responda correctamente
+            </summary>
+            <param name="satellites"> array de objetos satelites</param>
+            <returns></returns>
+        </member>
+        <member name="M:SpaceApi.Controllers.topsecret_splitController.Obtener">
+            <summary>
+            Se obtiene la informacion del mensaje y la posicion del emisor siempre y cuando esten cargados los tres satelites
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SpaceApi.Controllers.topsecret_splitController.PostKenobi(SpaceApi.Aplicacion.DTO.RequestSplitDTO)">
+            <summary>
+            Registra la informacion del satelite Kenobi (distancia y mensaje)
+            </summary>
+            <param name="satelite"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SpaceApi.Controllers.topsecret_splitController.PostSkyWalker(SpaceApi.Aplicacion.DTO.RequestSplitDTO)">
+            <summary>
+            Registra la informacion del satelite SkyWalker (distancia y mensaje)
+            </summary>
+            <param name="satelite"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SpaceApi.Controllers.topsecret_splitController.PostSato(SpaceApi.Aplicacion.DTO.RequestSplitDTO)">
+            <summary>
+            Registra la informacion del satelite Sato (distancia y mensaje)
+            </summary>
+            <param name="satelite"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

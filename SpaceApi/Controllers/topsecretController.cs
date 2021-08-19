@@ -22,7 +22,11 @@ namespace SpaceApi.Controllers
         }
 
         
-
+        /// <summary>
+        /// Retorna el mensaje que puede interpretar a partir del request. El array de JSon debe tener tres elementos para que responda correctamente
+        /// </summary>
+        /// <param name="satellites"> array de objetos satelites</param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult<ResponseDTO> Post(RequestDTO satellites)
 
@@ -30,6 +34,8 @@ namespace SpaceApi.Controllers
             ResponseDTO oresponse = null;
             try
             {
+                if (satellites.satellites.Length != 3)
+                    throw new Exception("Debe haber tres satelites en el array enviado");
                 // determino el mensaje entre los distintos satelites
                 var msg = _gestorSatelite.GetMessage(satellites.satellites[0].message, satellites.satellites[1].message, satellites.satellites[2].message);
                 // determino la posicion 

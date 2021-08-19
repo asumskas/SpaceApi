@@ -10,16 +10,17 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchUrl": "api/topsecret",
       "launchBrowser": true,
+      "launchUrl": "swagger",
       "environmentVariables": {
+        "API_KEY": "AIzaSyDdbn_CoCkBKG3aUNYkQhOx3EWHo-BzbCQ",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "SpaceApi": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/topsecret",
+      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

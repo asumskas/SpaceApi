@@ -17,6 +17,8 @@ using Microsoft.Extensions.Options;
 using SpaceApi.Core.Service;
 using SpaceApi.Core.Interface;
 using SateliteService = SpaceApi.Core.Service.SateliteService;
+using System.Reflection;
+using System.IO;
 
 namespace SpaceApi
 {
@@ -38,8 +40,15 @@ namespace SpaceApi
             ConfigureDependencyInjection(services);
             services.AddSingleton<ISatelitesettings>(d => d.GetRequiredService<IOptions<Satelitesettings>>().Value);
 
-           
-          
+            services.AddSwaggerGen(swagger =>
+            {
+                swagger.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "API Space", Version = "v1" });
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name }.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                swagger.IncludeXmlComments(xmlPath);
+            });
+
+            
 
 
         }
@@ -63,6 +72,22 @@ namespace SpaceApi
                 endpoints.MapControllers();
 
             });
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Banelco");
+            });
+
+
+
+
+
+
+
+
+
         }
 
         private void ConfigureDependencyInjection(IServiceCollection services)

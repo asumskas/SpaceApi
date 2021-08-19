@@ -24,6 +24,10 @@ namespace SpaceApi.Controllers
 
         }
 
+        /// <summary>
+        /// Se obtiene la informacion del mensaje y la posicion del emisor siempre y cuando esten cargados los tres satelites
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult<ResponseDTO> Obtener()
         {
@@ -59,7 +63,11 @@ namespace SpaceApi.Controllers
 
 }
 
-        
+        /// <summary>
+        /// Registra la informacion del satelite Kenobi (distancia y mensaje)
+        /// </summary>
+        /// <param name="satelite"></param>
+        /// <returns></returns>
         [HttpPost("Kenobi")]
         
         public ActionResult<SateliteBDDto> PostKenobi(RequestSplitDTO satelite)
@@ -83,7 +91,11 @@ namespace SpaceApi.Controllers
 
         }
 
-
+        /// <summary>
+        /// Registra la informacion del satelite SkyWalker (distancia y mensaje)
+        /// </summary>
+        /// <param name="satelite"></param>
+        /// <returns></returns>
         [HttpPost("SkyWalker")]
 
         public ActionResult<SateliteBDDto> PostSkyWalker(RequestSplitDTO satelite)
@@ -107,7 +119,11 @@ namespace SpaceApi.Controllers
 
         }
 
-
+        /// <summary>
+        /// Registra la informacion del satelite Sato (distancia y mensaje)
+        /// </summary>
+        /// <param name="satelite"></param>
+        /// <returns></returns>
         [HttpPost("Sato")]
 
         public ActionResult<SateliteBDDto> PostSato(RequestSplitDTO satelite)
