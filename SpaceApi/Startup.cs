@@ -77,7 +77,7 @@ namespace SpaceApi
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Banelco");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API ");
             });
 
 
